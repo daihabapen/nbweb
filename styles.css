@@ -1,0 +1,40 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.scene {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero, .enemy, .hero-attack, .enemy-group, .effect, .hero-end, .child {
+    position: absolute;
+    transition: transform 1s ease;
+}
+
+@media (min-width: 768px) {
+    #scene-1 .hero {
+        transform: translateX(-50px);
+    }
+    #scene-1 .enemy {
+        transform: translateX(50px);
+    }
+    #scene-2 .effect {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 767px) {
+    #scene-1 .hero {
+        transform: translateY(20px);
+    }
+    #scene-2 .effect {
+        transform: scale(1.1);
+    }
+}
